@@ -95,6 +95,11 @@ debug "Checking if eb exists and can connect."
 /usr/local/bin/eb status || fail "EB is not working or is not set up correctly."
 
 debug "Pushing to AWS eb servers."
-nohup /usr/local/bin/eb deploy &
+if [ -n "$WERCKER_ELASTIC_BEANSTALK_DEPLOY_NOHUP" ]
+then
+    nohup /usr/local/bin/eb deploy $WERCKER_ELASTIC_BEANSTALK_DEPLOY_OPTS &
+else
+    /usr/local/bin/eb deploy $WERCKER_ELASTIC_BEANSTALK_DEPLOY_OPTS
+fi
 
 success 'Successfully pushed to Amazon Elastic Beanstalk'

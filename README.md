@@ -10,7 +10,8 @@
 * `app_name` (required) Name of the application.
 * `env_name` (required) Name of the application environment you wish to deploy to.
 * `region` (optional) Region that your elastic beanstalk instance lives in, defaults to us-west-2.
-
+* `nohup` (optional) Deploying background jobs.
+* `opts` (optional) eb deploy options. ex) `--staged`
 
 ```yml
 deploy:
@@ -21,4 +22,6 @@ deploy:
             app_name: My Application
             env_name: production
             region: us-west-2
+            nohup: true
+            opts: --staged
 ```
