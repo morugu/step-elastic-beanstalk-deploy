@@ -4,8 +4,8 @@ box:
   password: $PASSWORD
 
 build:
-  steps:
-    - validate-wercker-step
+  - script:
+    code: 'echo success'
 
 publish:
   steps:
