@@ -2,3 +2,7 @@ box: wercker/default
 build:
   steps:
     - validate-wercker-step
+publish:
+  steps:
+    - internal/publish-step:
+        owner: shoya
