@@ -1,10 +1,12 @@
 box:
-  id: wercker/default
+  id: debian:stable-slim
   username: $USERNAME
   password: $PASSWORD
+
 build:
   steps:
     - validate-wercker-step
+
 publish:
   steps:
     - internal/publish-step:
