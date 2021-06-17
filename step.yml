@@ -10,18 +10,18 @@ keywords:
   - amazon eb
   - eb
 properties:
-  - key:
+  - name: key
     type: string
     required: true
-  - secret:
+  - name: secret
     type: string
     required: true
-  - app_name:
+  - name: app_name
     type: string
     required: true
-  - env_name:
+  - name: env_name
     type: string
     required: true
-  - region:
+  - name: region
     type: string
     required: true
