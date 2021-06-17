@@ -1,13 +1,10 @@
 box:
-  id: debian:stable-slim
+  id: alpine
   username: $USERNAME
   password: $PASSWORD
 
 build:
-  step:
-    - script:
-        code: |
-          echo 'success'
+  steps:
 
 publish:
   steps:
