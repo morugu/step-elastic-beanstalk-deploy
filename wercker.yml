@@ -3,6 +3,12 @@ box:
   username: $USERNAME
   password: $PASSWORD
 
+build:
+  step:
+    - script:
+        code: |
+          echo 'success'
+
 publish:
   steps:
     - internal/publish-step:
